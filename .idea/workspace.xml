@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html" line="125" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86409e6f-cc5e-4e33-918c-e1dcff90a124" name="默认" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="test" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="名企真题填空-训练-【赛码网】.html" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="866" column="73" lean-forward="false" selection-start-line="866" selection-start-column="73" selection-end-line="866" selection-end-column="73" />
+              <folding>
+                <marker date="1495784860726" expanded="true" signature="19468:19682" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="21021:21053" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="35334:35351" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="35366:35431" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="35480:35564" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="35635:35652" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="35667:35732" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="35781:35865" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="36518:36545" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="36672:36699" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="39840:39850" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="40000:40010" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="40159:40169" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="46030:46062" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="51468:51484" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="51564:51579" ph="..." />
+                <marker date="1495784860726" expanded="true" signature="54823:54905" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigation.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebContent/USER/navigation.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="33" column="88" lean-forward="false" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/USER/Test.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1216">
+              <caret line="64" column="35" lean-forward="false" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+              <folding>
+                <marker date="1499043411167" expanded="true" signature="24251:24261" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>question_right_bottom_list</find>
+      <find>unde</find>
+      <find>i+65</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/WebContent/index.html" />
+        <option value="$USER_HOME$/Desktop/Test/WebContent/Login.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/Loginx.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/login.html" />
+        <option value="$PROJECT_DIR$/WebContent/USER/Test.html" />
+        <option value="$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html" />
+        <option value="$USER_HOME$/Desktop/demo.html" />
+        <option value="$PROJECT_DIR$/WebContent/demo.html" />
+        <option value="$PROJECT_DIR$/WebContent/USER/Test.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/USER/navigation.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <exe-path />
+    <config-path />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="USER" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/201605111555" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\sssri\code\src\test\WebContent" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" value="" />
+      <option name="filePath" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",HTML5_OUTLINE_MODE" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86409e6f-cc5e-4e33-918c-e1dcff90a124" name="默认" comment="" />
+      <created>1492238117788</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1492238117788</updated>
+      <workItem from="1492238119949" duration="485000" />
+      <workItem from="1492328302018" duration="1037000" />
+      <workItem from="1492347299697" duration="1834000" />
+      <workItem from="1492400598943" duration="7000" />
+      <workItem from="1492407504956" duration="809000" />
+      <workItem from="1492581088653" duration="25000" />
+      <workItem from="1492592504959" duration="2000" />
+      <workItem from="1492757245214" duration="625000" />
+      <workItem from="1493083279192" duration="446000" />
+      <workItem from="1493172465789" duration="596000" />
+      <workItem from="1495180012636" duration="3451000" />
+      <workItem from="1495264213355" duration="536000" />
+      <workItem from="1495416238199" duration="620000" />
+      <workItem from="1495416947044" duration="56000" />
+      <workItem from="1495440913074" duration="448000" />
+      <workItem from="1495441959485" duration="1080000" />
+      <workItem from="1495500207914" duration="2313000" />
+      <workItem from="1495502576478" duration="2139000" />
+      <workItem from="1495589923699" duration="4457000" />
+      <workItem from="1495606068321" duration="2246000" />
+      <workItem from="1495613472865" duration="5000" />
+      <workItem from="1495613632052" duration="2373000" />
+      <workItem from="1495616306019" duration="723000" />
+      <workItem from="1495674137744" duration="5764000" />
+      <workItem from="1495779511207" duration="485000" />
+      <workItem from="1495780037108" duration="8628000" />
+      <workItem from="1495863561198" duration="2296000" />
+      <workItem from="1496736412420" duration="754000" />
+      <workItem from="1496797138925" duration="171000" />
+      <workItem from="1498813872766" duration="109000" />
+      <workItem from="1499062866503" duration="71000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="44591000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14488935" sideWeight="0.48816028" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23223753" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14519535" sideWeight="0.5118397" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../.." />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html</url>
+          <line>799</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html</url>
+          <line>630</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/WebContent/login.html</url>
+          <line>45</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/WebContent/login.html</url>
+          <line>49</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/WebContent/login.html</url>
+          <line>51</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html</url>
+          <line>151</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/WebContent/login.html</url>
+          <line>40</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html</url>
+          <line>336</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html</url>
+          <line>357</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html</url>
+          <line>372</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html</url>
+          <line>419</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="22" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="file://C:/Users/sssri/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+        <watch expression="tags" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10830">
+          <caret line="570" column="56" lean-forward="false" selection-start-line="570" selection-start-column="56" selection-end-line="570" selection-end-column="56" />
+          <folding>
+            <marker date="1495784860726" expanded="true" signature="19468:19682" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="21021:21053" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35334:35351" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35366:35431" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35480:35564" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35635:35652" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35667:35732" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35781:35865" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36518:36545" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36672:36699" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="39840:39850" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40000:40010" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40159:40169" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="46030:46062" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51468:51484" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51564:51579" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="54823:54905" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test_MultipleChoice.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test.html" />
+    <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10830">
+          <caret line="570" column="56" lean-forward="true" selection-start-line="570" selection-start-column="56" selection-end-line="570" selection-end-column="56" />
+          <folding>
+            <marker date="1495784860726" expanded="true" signature="19468:19682" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="21021:21053" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35334:35351" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35366:35431" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35480:35564" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35635:35652" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35667:35732" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35781:35865" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36518:36545" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36672:36699" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="39840:39850" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40000:40010" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40159:40169" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="46030:46062" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51468:51484" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51564:51579" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="54823:54905" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test_MultipleChoice.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test.html" />
+    <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13965">
+          <caret line="735" column="28" lean-forward="true" selection-start-line="735" selection-start-column="28" selection-end-line="735" selection-end-column="28" />
+          <folding>
+            <marker date="1495784860726" expanded="true" signature="19468:19682" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="21021:21053" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35334:35351" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35366:35431" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35480:35564" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35635:35652" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35667:35732" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35781:35865" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36518:36545" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36672:36699" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="39840:39850" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40000:40010" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40159:40169" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="46030:46062" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51468:51484" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51564:51579" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="54823:54905" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/resource/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="15511" lean-forward="false" selection-start-line="15" selection-start-column="15511" selection-end-line="15" selection-end-column="15511" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4807">
+          <caret line="253" column="131" lean-forward="false" selection-start-line="253" selection-start-column="34" selection-end-line="253" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test.html" />
+    <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495784860726" expanded="true" signature="19468:19682" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="21021:21053" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35334:35351" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35366:35431" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35480:35564" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35635:35652" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35667:35732" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35781:35865" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36518:36545" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36672:36699" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="39840:39850" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40000:40010" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40159:40169" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="46030:46062" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51468:51484" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51564:51579" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="54823:54905" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11970">
+          <caret line="630" column="19" lean-forward="false" selection-start-line="630" selection-start-column="19" selection-end-line="630" selection-end-column="19" />
+          <folding>
+            <marker date="1495784860726" expanded="true" signature="19468:19682" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="21021:21053" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35334:35351" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35366:35431" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35480:35564" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35635:35652" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35667:35732" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35781:35865" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36518:36545" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36672:36699" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="39840:39850" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40000:40010" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40159:40169" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="46030:46062" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51468:51484" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51564:51579" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="54823:54905" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/Loginx.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebContent/Loginx.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebContent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/NewFile1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Test/WebContent/Login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/NewFile1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Test/WebContent/Login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Test/WebContent/Login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="54" lean-forward="true" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/NewFile1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/NewFile1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/NewFile1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/NewFile1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/NewFile.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebContent/Login.jsp" />
+    <entry file="file://$USER_HOME$/Desktop/Test/WebContent/Login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/NewFile1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/Loginx.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebContent/resource/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="15" column="15511" lean-forward="false" selection-start-line="15" selection-start-column="15511" selection-end-line="15" selection-end-column="15511" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/PDF/build/pdf.worker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1837">
+          <caret line="9202" column="19" lean-forward="false" selection-start-line="9202" selection-start-column="19" selection-end-line="9202" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test_MultipleChoice.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test.html" />
+    <entry file="file://$USER_HOME$/Desktop/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-573">
+          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="82" column="37" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="92" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/Test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="64" column="35" lean-forward="false" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+          <folding>
+            <marker date="1499043411167" expanded="true" signature="24251:24261" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/web/考试界面参考资料/名企真题填空-训练-【赛码网】.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="866" column="73" lean-forward="false" selection-start-line="866" selection-start-column="73" selection-end-line="866" selection-end-column="73" />
+          <folding>
+            <marker date="1495784860726" expanded="true" signature="19468:19682" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="21021:21053" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35334:35351" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35366:35431" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35480:35564" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35635:35652" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35667:35732" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="35781:35865" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36518:36545" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="36672:36699" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="39840:39850" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40000:40010" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="40159:40169" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="46030:46062" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51468:51484" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="51564:51579" ph="..." />
+            <marker date="1495784860726" expanded="true" signature="54823:54905" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/USER/navigation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="33" column="88" lean-forward="false" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

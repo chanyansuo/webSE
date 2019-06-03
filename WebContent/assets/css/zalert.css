@@ -1,0 +1,90 @@
+.zdialog_mask {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.zdialog_panel {
+	position: fixed;
+	z-index: 10000;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #FFFFFF;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.zdialog_content {
+	padding: 12px 24px;
+	font-size: 18px;
+	line-height: 1.3;
+	word-wrap: break-word;
+	word-break: break-all;
+	color: #999;
+}
+
+.zdialog_action {
+	position: relative;
+	line-height: 48px;
+	font-size: 18px;
+	display: flex;
+}
+
+.zdialog_action:after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 1px;
+	border-top: 1px solid #D5D5D6;
+	color: #D5D5D6;
+	transform-origin: 0 0;
+	transform: scaleY(0.5);
+}
+
+.zdialog_action a {
+	display: block;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	color: #353535;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	position: relative;
+}
+
+.zdialog_action a:active {
+	background-color: #EEEEEE;
+}
+
+.zdialog_action a.primary {
+	color: #0080c0;
+	border-right: 1px solid #d5d5d6
+}
+
+.zdialog_tips .zdialog_mask {
+	background-color: transparent;
+}
+
+.zdialog_tips .zdialog_content {
+	background: rgba(40, 40, 40, 0.75);
+	color: #fff;
+}
+
+.zdialog_tips .zdialog_action {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.zdialog_panel {
+		width: 25%;
+	}
+}
