@@ -65,11 +65,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"> </div>
 				<div class="menu_test1">
 					<span class="menu-info"> </span>
-						<ul class="cl-effect-test">
+						<ul class="cl-effect-test" style="margin-top:10%">
 <!-- 							<li><a href="Favorite.jsp" class="buttom">收藏夹</a></li> -->
 <!-- 							<li><a href="Worry.jsp" class="buttom">错题集</a></li> -->
-							<li><a href=# class="buttom" onclick="no()">收藏夹</a></li>
-							<li><a href=# class="buttom" onclick="no()">错题集</a></li>
+<!--							<li><a href=# class="buttom" onclick="no()">收藏夹</a></li> -->
+<!--							<li><a href=# class="buttom" onclick="no()">错题集</a></li> -->
+								<li></li>
+								<li></li>
 						</ul>
 				</div>
 			<div class="clearfix"> </div>

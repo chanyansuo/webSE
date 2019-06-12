@@ -37,6 +37,7 @@
 	
 	<link rel="stylesheet" href="../resource/css/jquery.cxdialog.css" type="text/css" media="all" />
 
+	<script src="/webSE/resource/js/htmlActive.js"></script>
 </head>
 <body class="header-fixed-top">
 
@@ -63,11 +64,13 @@
               			</div>
               			<nav id="menu" class="menu collapse navbar-collapse">
 			            	<ul id="headernavigation" class="menu-list nav navbar-nav">
-			                	<li><a id="1" href="Information_Person.jsp"><%= session.getAttribute("login_name")%></a></li>
-			                	<li class="active"><a href="index_Logined.jsp" style="width: 150px;text-align: center;">首&nbsp;&nbsp;页</a></li>
-								<li><a href="BaomiStudy.jsp">保密学习与考试</a></li>
-								<li><a href=# onclick="no()">安全学习与考试</a></li>
-								<li><a href="employeebandbook.jsp"  style="width: 150px;text-align: center;">员工手册</a></li>
+			                	<li><a id="1" href="Information_Person.jsp">
+			                	<script type="text/javascript">showUserName('1');</script>
+			                	</a></li>
+			                	<li class="active"><a href="index_Logined." style="width: 150px;text-align: center;">首&nbsp;&nbsp;页</a></li>
+								<li><a href="BaomiStudy.html">保密学习与考试</a></li>
+								<li><a href="AnquanStudy.html">安全学习与考试</a></li>
+								<li><a href="employeebandbook.html"  style="width: 150px;text-align: center;">员工手册</a></li>
 								<li><a href=# onclick="no()"  style="width: 150px;text-align: center;">项目管理</a></li>
 								<li><a href=# onclick="fun()" style="width: 150px;text-align: center;">退&nbsp;&nbsp;出</a></li>
 			          		</ul><!-- /.menu-list -->

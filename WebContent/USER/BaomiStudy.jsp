@@ -38,6 +38,7 @@
 	<link href="../assets/css/responsive.css" rel="stylesheet">
 	
 	<link rel="stylesheet" href="../resource/css/jquery.cxdialog.css" type="text/css" media="all" />
+	
 	<link rel="stylesheet" href="../resource/css/Exam.css" type="text/css" media="all" />
 
 	
@@ -124,7 +125,6 @@
                 </div>
             </a>  
 			<a href="Exercise.jsp">      
-<!--            <a href=# onclick="ExChoice()">    -->
                 <div class="col-md-3 text-center">
                     <div class="single_service wow fadeInUp" data-wow-delay="0.5s">
                         <i class="icon-gears"></i>
@@ -157,68 +157,35 @@
                     </div>
                 </div>
             </a> 
-           				 <div id="ExamClass">
-							<div id="loginModal" class="modal show">
-								<div class="modal-dialog" style="margin-top: 250px;">
-								    <div class="modal-content">
-								    	<div class="modal-header">
-									        <button type="button" class="close" onclick="document.getElementById('ExamClass').style.display='none'">×</button>
-									        <h1 class="text-center text-primary">考试须知</h1>
-									    </div>
-									    <div class="modal-body">
-									    	<form action="" class="form col-md-12 center-block" onsubmit="return false">
-									    	<div class="form-group">
-									        	<iframe src="warning.jsp" style="height: 300px;">
-							
-									    		</iframe>
-									   		</div>
-									        <div class="form-group">
-									           	<p>我已阅读并承诺<input id="loginChoice" type="checkbox" style="width: 30px;"/></p>
-									        </div>
-									        <div class="form-group">
-									            <button id="submit" class="btn btn-primary btn-lg btn-block" onclick="test()">确认</button>
-									        </div>
-									        </form>
-									    </div>
-									    <div class="modal-footer">
-									        
-									    </div>
-									</div>
-								</div>
+			<div id="ExamClass">
+				<div id="loginModal" class="modal show">
+					<div class="modal-dialog" style="margin-top: 250px;">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" onclick="document.getElementById('ExamClass').style.display='none'">×</button>
+								<h1 class="text-center text-primary">考试须知</h1>
 							</div>
-						</div>  
-<!--
-						<div id="ExerciseClass">
-							<div id="loginModal" class="modal show">
-								<div class="modal-dialog" style="margin-top: 350px;">
-								    <div class="modal-content">
-								    	<div class="modal-header">
-									        <button type="button" class="close" onclick="document.getElementById('ExerciseClass').style.display='none'">×</button>
-									        <h1 class="text-center text-primary">练习类型选择</h1>
-									    </div>
-									    <div class="modal-body" style="height: 130px;">
-									    	<form action="" class="form col-md-12 center-block" onsubmit="return false">
-									        <div class="form-group" style="height: 120px;">
-									           	<p style="color: #5A6569;font-size: 1.2em;line-height: 25px;">题目模式一<input style="width: 80px;" id="ExChoice" name="ExChoice" type="radio" onclick="check(this)" value="1"/></p>
-									           	<p style="color: #5A6569;font-size: 1.2em;line-height: 25px;">题目模式二<input style="width: 80px;" id="ExChoice" name="ExChoice" type="radio" onclick="check(this)" value="2"/></p>
-									           	<p style="color: #5A6569;font-size: 1.2em;line-height: 25px;">题目模式三<input style="width: 80px;" id="ExChoice" name="ExChoice" type="radio" onclick="check(this)" value="3"/></p>
-									        </div>
-									        <div class="form-group">
-									            <button id="submit2" class="btn btn-primary btn-lg btn-block" onclick="fun2()">确认</button>
-									        </div>
-									        </form>
-									    </div>
-									    <div class="modal-footer">
-									        
-									    </div>
-									</div>
+							<div class="modal-body">
+								<form action="" class="form col-md-12 center-block" onsubmit="return false">
+								<div class="form-group">
+									<iframe src="warning.jsp" style="height: 300px;"></iframe>
 								</div>
+								<div class="form-group">
+									<p>我已阅读并承诺<input id="loginChoice" type="checkbox" style="width: 30px;"/></p>
+								</div>
+								<div class="form-group">
+									<button id="submit" class="btn btn-primary btn-lg btn-block" onclick="test()">确认</button>
+								</div>
+								</form>
 							</div>
+							<div class="modal-footer"></div>
 						</div>
--->						 
-            </div>            
-        </div>
-    </section>
+					</div>
+				</div>
+			</div>  					 
+		</div>            
+	</div>
+</section>
 
 
 
