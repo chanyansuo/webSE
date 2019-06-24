@@ -25,5 +25,6 @@
 		<mapper class="com.sssri.server.db.mapper.IUserMapper"/>
 		<mapper class="com.sssri.server.db.mapper.IgetExamMapper"/>
 		<mapper class="com.sssri.server.db.mapper.IgetAdminInfo"/>
+		<mapper class="com.sssri.server.db.mapper.ISafetyExamMapper"/>
 	</mappers>
 </configuration>

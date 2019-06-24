@@ -371,7 +371,8 @@ public class UserExm {
 			User userInfo = userDAO.selectUserByID(employeeId);
 			Record checkRecord = ExamDao.SelectNowExam(employeeId);
 			JSONObject map=new JSONObject();
-			if (userInfo.getNow_Exam()==0) {
+			//2019.6.24在这加加判断，大大于10000的我就排除掉，这个是保密考试
+			if (userInfo.getNow_Exam()==0||userInfo.getNow_Exam()>10000) {
 				map.put("isExam", false);
 				result="您最近的考试已完成，等待管理员发布新的考试!";
 				map.put("result", result);
@@ -411,40 +412,7 @@ public class UserExm {
 			map.put("isExam", false);
 			result="没有你需要参加的考试!！";
 			map.put("result", result);
-			return map.toJSONString();
-//			if (userInfo.getNow_Exam()==checkRecord.getExam_id()) {//判断用户是否有考试
-//				map.put("isExam", true);
-//				DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); //旧版时间计算以后不再使用，懒得改了都测试过了
-//				Date examdate,nowdate;
-//				examdate= format.parse(checkRecord.getExam_date());//要抛出异常的
-//				Calendar enddate = Calendar.getInstance();//考试结束时间
-//				enddate.setTime(examdate);
-//				enddate.add(Calendar.MINUTE, checkRecord.getExam_time());
-//				nowdate=new Date();
-//				if (nowdate.getTime()>=examdate.getTime()&&nowdate.getTime()<=enddate.getTime().getTime()) {//判断考试时候开始
-//					map.put("result",1);
-//					return map.toJSONString();
-//				} else if(nowdate.getTime()<examdate.getTime()){
-//					result="考试还未开始请稍后！";
-//					map.put("result",result);
-//					return map.toJSONString();
-//				} else{
-//					result="考试已结束！";
-//					map.put("result",result);
-//					return map.toJSONString();
-//				}
-//			}else {
-//				if (userInfo.getNow_Exam()==0) {
-//					map.put("isExam", false);
-//					result="考试已完成，请勿重复答题!";
-//					map.put("result", result);
-//					return map.toJSONString();
-//				}
-//				map.put("isExam", false);
-//				result="没有你需要参加的考试!";
-//				map.put("result", result);
-//				return map.toJSONString();
-//			}
+			return map.toJSONString();		
 			
 		} finally {
 			if (session != null)

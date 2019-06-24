@@ -356,7 +356,7 @@ function fun(){
 			type: "GET",
 			dataType: "json",
 			contentType: "application/x-www-form-urlencoded; charset=utf-8", 
-			url: "../rest/Exam/checkQA",
+			url: "../rest/SafetyExam/checkQA",
 			async: false,
 			error: function(errCode, errMsg) {
 				alert("Connection error: "+errCode);

@@ -24,6 +24,7 @@ public class MyRestApplication extends Application{
 	public MyRestApplication(){
 		singletons.add(new UserRestService());//用户登陆
 		singletons.add(new UserExm());//用户生成考卷
+		singletons.add(new SafetyExam());//2019.6.24安全考试程序
 		singletons.add(new AdminManageService());//管理员后台数据管理
 		singletons.add(new CheckAnswerRestService());//后台答案核对程序
 		singletons.add(new PracticeRestService());//后台答案核对程序

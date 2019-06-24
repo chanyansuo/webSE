@@ -249,7 +249,7 @@ document.oncontextmenu=function(){
    	 		cache: true,
    		 	type: "GET",
     		dataType: "json",
-    		url: "../rest/Exam/getExam",   //后台连接代码
+    		url: "../rest/SafetyExam/getExam",   //后台连接代码
     		async: false,
     		error: function(request) {
     	    	alert("生成考卷失败");
