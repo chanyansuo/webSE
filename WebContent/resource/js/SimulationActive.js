@@ -123,42 +123,47 @@ Simulation.html
 		var x="";     //字符串空间
 		if(CmpSum != 0 && typeof(CmpSum) != "undefined")
 		{
-			x="";    //清空字符串空间
+			x="<div style=\"margin-left: 48px;\">";    //清空字符串空间
 			for(j=1;j<=CmpSum;j++){
 				x+="<div id=\"Cmp" + j + "\" class=\"nub\"><a href=# class=\"\" onclick=skip(1,"+(j-1)+")>" + j + "</a></div>";
 			}
+			x+="</div>"
 			$("#CmpDIV").html("<div class=\"choice-title\"><p id=\"Cmp\">填空题</p></div>" + x);
 		}
 		if(TFSum != 0 && typeof(TFSum) != "undefined")
 		{
-			x="";
+			x="<div style=\"margin-left: 48px;\">";
 			for(j=1;j<=TFSum;j++){
 				x+="<div id=\"TF" + j + "\" class=\"nub\"><a href=# class=\"\" onclick=skip(2,"+(j-1)+")>" + j + "</a></div>";
 			}
+			x+="</div>"
 			$("#TFDIV").html("<div class=\"choice-title\"><p id=\"TF\">判断题</p></div>" + x);
 		}
 		if(CSum != 0 && typeof(CSum) != "undefined")
 		{
-			x="";
+			x="<div style=\"margin-left: 48px;\">";
 			for(j=1;j<=CSum;j++){
 				x+="<div id=\"choice" + j + "\" class=\"nub\"><a href=# class=\"\" onclick=skip(3,"+(j-1)+")>" + j + "</a></div>";
 			}
+			x+="</div>"
 			$("#choiceDIV").html("<div class=\"choice-title\"><p id=\"choice\">单选题</p></div>" + x);
 		}
 		if(MulCSum != 0 && typeof(MulCSum) != "undefined")
 		{
-			x="";
+			x="<div style=\"margin-left: 48px;\">";
 			for(j=1;j<=MulCSum;j++){
 				x+="<div id=\"Mulchoice" + j + "\" class=\"nub\"><a href=# class=\"\" onclick=skip(4,"+(j-1)+")>" + j + "</a></div>";
 			}
+			x+="</div>"
 			$("#mulchoiceDIV").html("<div class=\"choice-title\"><p id=\"Mulchoice\">多选题</p></div>" + x);
 		}
 		if(QutSum != 0 && typeof(QutSum) != "undefined")
 		{
-			x="";
+			x="<div style=\"margin-left: 48px;\">";
 			for(j=1;j<=QutSum;j++){
 				x+="<div id=\"Qut" + j + "\" class=\"nub\"><a href=# class=\"\" onclick=skip(5,"+(j-1)+")>" + j + "</a></div>";
 			}
+			x+="</div>"
 			$("#QutDIV").html("<div class=\"choice-title\"><p id=\"Qut\">简答题</p></div>" + x);
 		}
 	}
