@@ -18,6 +18,7 @@ Simulation.html
 		RadioNum = 0;
 		if(CmpSum != 0){
 			type = 1;
+			DATA.completion[(type-1)].itemStatus = 4;
 		}
 		else if(TFSum != 0){
 			type = 2;
@@ -31,7 +32,7 @@ Simulation.html
 		else{
 			type = 5;
 		}
-		DATA.completion[(type-1)].itemStatus = 4;
+		
 		c = 2700;
 		$("#timepiece").html(formatSeconds(c));    //将c的值显示为时间形式，考试限时
 	}
@@ -42,6 +43,28 @@ Simulation.html
 		return a;
 	}
 
+	//题目类型不全是显示设置
+	function R_JS(){
+		y = "";
+		if(CmpSum != 0){
+			y += "<li><a class=\"buttom\" id=\"Bcmp\" onclick=\"skip(1,0)\">填空题</a></li>";
+		}
+		if(TFSum != 0){
+			y += "<li><a class=\"buttom\" id=\"Btf\" onclick=\"skip(2,0)\">判断题</a></li>";
+		}
+		if(CSum != 0){
+			y += "<li><a class=\"buttom\" id=\"Bchoice\" onclick=\"skip(3,0)\">单选题</a></li>";
+		}
+		if(MulCSum != 0){
+			y +="<li><a class=\"buttom\" id=\"Bmulchoice\" onclick=\"skip(4,0)\">多选题</a></li>";
+		}
+		if(QutSum != 0){
+			y +="<li><a class=\"buttom\" id=\"Bq\" onclick=\"skip(5,0)\">简答题</a></li>";
+		}
+		$("#NWbuttom").html(y);
+		
+	}
+	
 	//题目显示
 	function showQuestionType(value){
 		Buttonclass(value);     //题目类型设置
@@ -315,11 +338,21 @@ Simulation.html
 
 	//题目类型样式变化
 	function Buttonclass(value){
-		document.getElementById("Bcmp").setAttribute("class","tbuttom");
-		document.getElementById("Btf").setAttribute("class","tbuttom");
-		document.getElementById("Bchoice").setAttribute("class","tbuttom");
-		document.getElementById("Bmulchoice").setAttribute("class","tbuttom");
-		document.getElementById("Bq").setAttribute("class","tbuttom");
+		if(CmpSum != 0){
+			document.getElementById("Bcmp").setAttribute("class","tbuttom");
+		}
+		if(TFSum != 0){
+			document.getElementById("Btf").setAttribute("class","tbuttom");	
+		}
+		if(CSum != 0){
+			document.getElementById("Bchoice").setAttribute("class","tbuttom");
+		}
+		if(MulCSum != 0){
+			document.getElementById("Bmulchoice").setAttribute("class","tbuttom");
+		}
+		if(QutSum != 0){
+			document.getElementById("Bq").setAttribute("class","tbuttom");
+		}
 		switch (value){
 		case 1:
 		document.getElementById("Bcmp").setAttribute("class","tactivebuttom");

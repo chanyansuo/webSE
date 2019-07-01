@@ -25,3 +25,11 @@
 1. 练习模式：有填空题，简答题选项，这两个要去掉
 2. 练习模式：选择题，会有出现undefined选项
 3. 模拟训练与前面考试系统一样出现考卷不显示内容
+
+# 2019.7.1修改 - MXY #
+1. 完成练习模式前端修改
+2. 修改模拟训练接口代码 ISafetyExamMapper Exammapper = session.getMapper(ISafetyExamMapper.class);
+3. 修改个人信息页面
+## <font color="#FF0000">bug需要修改</font> ##
+1. 练习模式下，单选题多选题，选项为空时需发送数据，避免出现undefined选项（保密部分有发送空值）
+2. user/getUserInfo 接口中需要增加 发送安全考试成绩，与安全考试时间，与保密考试数据分开显示

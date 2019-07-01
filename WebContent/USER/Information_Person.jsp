@@ -85,15 +85,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	//全局变量
 	var UserInfo,              //全部个人信息数据
-		ED,   //考试日期
-		FS,    //考试成绩
-		NAME = "姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：",              //姓名
-		ID = "工&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：",               //工号
-		SEX = "性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：",              //性别
-		UserPOSITION = "身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份：",           //身份
-		DEPARTMENT = "部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门：",             //部门
-		TestCASE = "考试情况：",            //考试情况
-		TestTIME = "考试时间：",   	 //考试时间
+		ED1,   //考试日期
+		FS1,    //考试成绩
+		ED2,   //考试日期
+		FS2,    //考试成绩
+		NAME = "姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：",              //姓名
+		ID = "工&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：",               //工号
+		SEX = "性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：",              //性别
+		UserPOSITION = "身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份：",           //身份
+		DEPARTMENT = "部&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;门：",             //部门
+		TestCASE_1 = "保密考试情况：",            //考试情况
+		TestTIME_1 = "保密考试时间：",   	 //考试时间
+		TestCASE_2 = "安全考试情况：",            //考试情况
+		TestTIME_2 = "安全考试时间：",   	 //考试时间
 		KeepTIME = "在线时间：",        //在线时间
 		a = "<p class=\"infor-p\">",
 		b = "</p>",
@@ -111,8 +115,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     		},
     		success: function(data) {
     			UserInfo = data.Data;
-    			ED = data.ExamDate;
-    			FS = data.FinalScore;
+    			ED1 = data.ExamDate;
+    			FS1 = data.FinalScore;
+    			ED2 = data.ExamDate;        //发送安全考试数据  20190701mxy
+    			FS2 = data.FinalScore;      //发送安全考试数据  20190701mxy
 	    	}
 		});
 	}
@@ -128,8 +134,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			UserPOSITION += "管理员";
 		}
 		DEPARTMENT += UserInfo.Department;
-		if( FS != "" && typeof(FS) != "undefined" ){
-			if(FS >=80){
+		if( typeof(FS1) != "undefined" ){
+			if(FS1 >=80){
 				var fs = "通过";
 			}
 			else{
@@ -139,14 +145,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		else{
 			var fs = "暂无数据";
 		}
-		TestCASE += fs;
-		if ( ED != "" && typeof(ED) != "undefined"){
+		TestCASE_1 += fs;
+		if ( ED1 != "" && typeof(ED1) != "undefined"){
 			var ed = ED;
 		}
 		else{
 			var ed = "暂无数据"
 		}
-		TestTIME += ed;
+		TestTIME_1 += ed;
+		if( typeof(FS2) != "undefined" ){
+			if(FS2 >=80){
+				var fs = "通过";
+			}
+			else{
+				var fs = "未通过";
+			}
+		}
+		else{
+			var fs = "暂无数据";
+		}
+		TestCASE_2 += fs;
+		if ( ED2 != "" && typeof(ED2) != "undefined"){
+			var ed = ED;
+		}
+		else{
+			var ed = "暂无数据"
+		}
+		TestTIME_2 += ed;
 // 		KeepTIME += UserInfo.name;
 	}
 
@@ -157,8 +182,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		y += a + SEX + b;
 		y += a + UserPOSITION + b;
 		y += a + DEPARTMENT + b;
-		y += a + TestCASE + b;
-		y += a + TestTIME + b;
+		y += a + TestCASE_1 + b;
+		y += a + TestTIME_1 + b;
+		y += a + TestCASE_2 + b;
+		y += a + TestTIME_2 + b;
 // 		y += a + KeepTIME + b;
 		$("#border").html(y);
 	}

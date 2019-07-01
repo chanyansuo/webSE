@@ -68,15 +68,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="vertical_val">
 		<div class="dd2">
 			<div class="container">
-				<p>考试信息</p>
+				<p>保密考试信息</p>
 				<div class="info2">
 					<div id="border" class="border">
 						
 					</div>
 				</div>
 			</div>
+			<div class="container">
+				<p>安全考试信息</p>
+				<div class="info2">
+					<div id="border2" class="border">
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+	
 </div>
 <!-- strip end here-->
 </body>
@@ -85,14 +94,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	//全局变量
 	var DATA,              //全部数据
-		TestSCORE = "考试成绩：",              //考试成绩
-		TestTIME = "考试时间",                //考试时间
+		TestSCORE1 = "保密考试成绩：",              //保密考试成绩
+		TestTIME1 = "保密考试时间",                //保密考试时间
+		TestSCORE2 = "安全考试成绩：",              //安全考试成绩
+		TestTIME2 = "安全考试时间",                //安全考试时间
 		a = "<p class=\"infor-p1\">",
 		b = "</p>",
 		TestScore = new Array(),           //考试成绩数据
 		TestTime = new Array(),            //考试时间数据
 		Length,
 		y="",
+		z="",
 		j;              //计数器
 	
 	function GetData(){
@@ -106,40 +118,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     	    	alert("获取个人信息失败");
     		},
     		success: function(data) {
-    			ED = data.ExamDate;
-    			FS = data.FinalScore;
+    			UserInfo = data.Data;
+    			ED1 = data.ExamDate;
+    			FS1 = data.FinalScore;
+    			ED2 = data.ExamDate;        //发送安全考试数据  20190701mxy
+    			FS2 = data.FinalScore;      //发送安全考试数据  20190701mxy
 	    	}
 		});
 	}
 		
 	function Valuation(){
-		if ( ED != "" && typeof(ED) != "undefined"){
+		if ( ED1 != "" && typeof(ED1) != "undefined"){
 			y = "";
-			if( FS != "" && typeof(FS) != "undefined" ){
-				if(FS >=80){
-					var fs = "通过";
+			if( typeof(FS1) != "undefined" ){
+				if(FS1 >=80){
+					var fs1 = "通过";
 				}
 				else{
-					var fs = "未通过";
+					var fs1 = "未通过";
 				}
 			}
 			else{
-				var fs = "未出成绩";
+				var fs1 = "未出成绩";
 			}
-			y += a + "成绩:" + FS + b;
-			y += a + "通过情况：" + fs + b;
-			y += a + "考试时间：" + ED + b;
+			y += a + "成绩:" + FS1 + b;
+			y += a + "通过情况：" + fs1 + b;
+			y += a + "考试时间：" + ED1 + b;
 			var x = "../rest/Manage/download";
 			//y += "<iframe name=\"study\" src=\"../PDF/web/viewer.html?file=../../doc/" + window.sessionStorage.getItem("login_user") + ".pdf\" style=\"width: 90%;height: 500px;\"></iframe>";
 			y += "<a id=\"download\" class=\"download\" href=\"" + x +"\">打开试卷</a>";
 		}
 		else{
 			y = a + "对不起，暂无考试数据！" + b;
-		}		
+		}
+		if ( ED2 != "" && typeof(ED2) != "undefined"){
+			z = "";
+			if( typeof(FS2) != "undefined" ){
+				if(FS2 >=80){
+					var fs2 = "通过";
+				}
+				else{
+					var fs2 = "未通过";
+				}
+			}
+			else{
+				var fs = "未出成绩";
+			}
+			z += a + "成绩:" + FS2 + b;
+			z += a + "通过情况：" + fs2 + b;
+			z += a + "考试时间：" + ED2 + b;
+			var x = "../rest/Manage/SafetyEXdownload";
+			//y += "<iframe name=\"study\" src=\"../PDF/web/viewer.html?file=../../doc/" + window.sessionStorage.getItem("login_user") + ".pdf\" style=\"width: 90%;height: 500px;\"></iframe>";
+			z += "<a id=\"download\" class=\"download\" href=\"" + x +"\">打开试卷</a>";
+		}
+		else{
+			z = a + "对不起，暂无考试数据！" + b;
+		}
 	}
 
 	function show(){
 		$("#border").html(y);
+	}
+	
+	function show2(){
+		$("#border2").html(z);
 	}
 	
 	function DownLoad(){
@@ -150,6 +192,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	GetData();
 	Valuation();
 	show();
+	show2();
 	
 	
 </script>		

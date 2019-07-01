@@ -11,7 +11,7 @@ Exercise.html
 		Current = 0;
 		WorkedNumber = 0;
 		currentNum = 0;
-		switch (type){
+			switch (type){
  			case 1:
   				PresentSum = DATA.completion.length;
  				CmpSum =  DATA.completion.length;
@@ -32,7 +32,7 @@ Exercise.html
  				PresentSum = DATA.question.length;
  				QutSum =  DATA.question.length;
  				break;
- 		}
+			}
 		RadioNum = 0;
 	}
 
@@ -388,7 +388,7 @@ Exercise.html
 	}
 
 	//题目类型样式变化
-	function Buttonclass(value){
+	function Buttonclass(value,ab){
 		document.getElementById("Bcmp").setAttribute("class","buttom");
 		document.getElementById("Btf").setAttribute("class","buttom");
 		document.getElementById("Bchoice").setAttribute("class","buttom");
@@ -703,6 +703,8 @@ Exercise.html
 		}
 	}
 
+
+	
 
 	//数据传递
 	function accept(value){

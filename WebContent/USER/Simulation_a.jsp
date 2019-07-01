@@ -51,12 +51,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="menu_test">
 				<p id="IdName" class="IdName"></p>
 					<span class="menu-info"> </span>
-						<ul class="cl-effect-test1">
-							<li><a class="buttom" id="Bcmp" onclick="skip(1,0)">填空题</a></li>
-							<li><a class="buttom" id="Btf" onclick="skip(2,0)">判断题</a></li>
-							<li><a class="buttom" id="Bchoice" onclick="skip(3,0)">单选题</a></li>
-							<li><a class="buttom" id="Bmulchoice" onclick="skip(4,0)">多选题</a></li>
-							<li><a class="buttom" id="Bq" onclick="skip(5,0)">简答题</a></li>
+						<ul class="cl-effect-test1" id="NWbuttom">
+							
 						</ul>
 				</div>
 			<div class="clearfix"> </div>
@@ -211,6 +207,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		GetData();
 		Valuation();
+		R_JS();
 		Number();
 		showQuestionType(type);
 		timedCount();

@@ -691,7 +691,8 @@ public class PracticeRestService {
 		SqlSession session =null;
 		try {
 			session = DatabaseUtils.getSessionFactory().openSession();//数据库连接
-			IgetExamMapper Exammapper = session.getMapper(IgetExamMapper.class);
+			ISafetyExamMapper Exammapper = session.getMapper(ISafetyExamMapper.class);
+			//IgetExamMapper Exammapper = session.getMapper(IgetExamMapper.class);
 			Record ExamRecrd = Exammapper.SelectExamNum(10001);//考试卷号选择应该由前段传输测试用1
 			ex= new Examination();
 			ex.setExam_id(1);//仅仅测试使用

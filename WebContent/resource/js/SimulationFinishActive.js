@@ -17,7 +17,22 @@ SimulationFinish.html
 		QutSum =  DATA.question.length;
 		Sum = CSum + MulCSum + TFSum + CmpSum + QutSum;
 		RadioNum = 0;
-		type=1;
+		if(CmpSum != 0){
+			type = 1;
+			DATA.completion[(type-1)].itemStatus = 4;
+		}
+		else if(TFSum != 0){
+			type = 2;
+		}
+		else if(CSum!= 0){
+			type = 3;
+		}
+		else if(MulCSum!= 0){
+			type = 4;
+		}
+		else{
+			type = 5;
+		}
 	}
 
 	//空格替换
