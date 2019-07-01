@@ -36,6 +36,10 @@ import com.sssri.server.db.model.User;
 import com.sssri.server.restful.UserExm;
 import com.sssri.server.restful.resource.manager.KSInfoManager;
 
+/**
+ * @author admin
+ *
+ */
 public class PdfExport {
 	
 	
@@ -163,6 +167,103 @@ public class PdfExport {
 		return false;
 	}
 
+	/**
+	 * 2019.6.29
+	  * 安全考试试卷生成
+	 * @param examInfo考生考卷
+	 * @param userMark考生成绩
+	 * @return
+	 */
+	public boolean SafeExamExport(Examination examInfo,Mark userMark){
+		
+		SqlSession session =null;
+		Document doc=new Document();
+		try {
+			
+			File file1 =new File("D:/SafeDoc/"+examInfo.getStartTime().replace(":", ""));//2017.8.7增加分考卷存储功能
+			if (!file1.exists()) {//判断是否存在当前批次文件夹
+				file1.mkdirs();//如果不存在则创建文件夹
+			}
+			
+			PdfWriter.getInstance(doc, new FileOutputStream("D:/SafeDoc/"+examInfo.getStartTime().replace(":", "")+"/"+examInfo.getEmployee_id()+".pdf"));//新目录
+			doc.open();
+			BaseFont baseFont=BaseFont.createFont("STSongStd-Light", "UniGB-UCS2-H", BaseFont.NOT_EMBEDDED);
+			Font titleFont=new Font(baseFont,20,Font.BOLD);
+			SimpleDateFormat DateFormat = new SimpleDateFormat("yyyy-MM-dd"); 
+			Date date = new Date(); 
+			Paragraph title=new Paragraph(DateFormat.format(date)+" 安全考试",titleFont);
+			title.setAlignment(ElementTags.ALIGN_CENTER);
+			doc.add(title);
+			doc.add(new Paragraph("\n"));
+			//正常字体
+			Font normalFont=new Font(baseFont,12,Font.NORMAL);
+			//答案字体(用红色显示)
+			Font answerFont=new Font(baseFont,12,Font.NORMAL,Color.RED);
+			//加下划线的用户答案
+			Font nlineFont=new Font(baseFont,12,Font.NORMAL|Font.UNDERLINE);
+			
+			//设置考生基本信息
+			session = DatabaseUtils.getSessionFactory().openSession();//数据库连接
+			IUserMapper userMapper = session.getMapper(IUserMapper.class);
+			User examUser = userMapper.selectUserByID(examInfo.getEmployee_id());
+			String strUser="舰船分所"+"   "+examUser.getDepartment()+"    "+examUser.getName();
+			Paragraph userName=new Paragraph(strUser, normalFont);
+			userName.setAlignment(ElementTags.ALIGN_RIGHT);
+			doc.add(userName);
+			doc.add(new Paragraph("\n"));
+			
+			//获取统计的成绩
+			Map<String, Object> gradeMap=new LinkedHashMap<String, Object>();
+			gradeMap.put("填空题", 0);//不需要填空题
+			gradeMap.put("判断题", userMark.getJudgment_score());
+			gradeMap.put("单选题", userMark.getChoice_score());
+			gradeMap.put("多选题", userMark.getMchoice_score());
+			gradeMap.put("简答题", 0);//不需要简单题
+			
+			PdfPTable gradeTable=CreateSaferGradeTable(gradeMap,normalFont, answerFont);
+			doc.add(gradeTable);
+			doc.add(new Paragraph("\n"));
+			
+			//标题字体
+			Font chapterFont=new Font(baseFont, 14, Font.NORMAL|Font.BOLD);
+						
+			//1.判断题
+			java.util.List<Judgment> judgmentList=examInfo.getJudgment();
+			double sum=examInfo.getJudgment_Score()*judgmentList.size();
+			doc.add(new Paragraph("一、判断题（每空"+examInfo.getJudgment_Score()+"分，共计"+sum+"分）",chapterFont));
+			
+			List judgList=getJudgList(judgmentList, normalFont, answerFont);
+			doc.add(judgList);
+			doc.add(new Paragraph("\n"));
+			
+			//2.单选题
+			java.util.List<Choice> choiceList=examInfo.getChoice();
+			sum=examInfo.getChoice_Score()*choiceList.size();
+			doc.add(new Paragraph("二、单选题（每题"+examInfo.getChoice_Score()+"分，共计"+sum+"分）",chapterFont));
+			
+			List dangxuanList=getChoiceList(choiceList, normalFont, answerFont);
+			doc.add(dangxuanList);
+			doc.add(new Paragraph("\n"));
+			
+			//3.多选题
+			java.util.List<Choice> multiChoiceList=examInfo.getMulchoice();
+			sum=examInfo.getMulChoice_Score()*multiChoiceList.size();
+			doc.add(new Paragraph("三、多选题（每题"+examInfo.getMulChoice_Score()+"分，共计"+sum+"分）",chapterFont));
+			
+			List mulList=getChoiceList(multiChoiceList, normalFont, answerFont);
+			doc.add(mulList);
+			doc.add(new Paragraph("\n"));
+					
+			doc.close();
+			return true; 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			 if (session != null)
+				 session.close();
+		}
+		return false;
+	}
 	private List getQuestionList(java.util.List<Question> juquesList, Font normalFont) {
 		List questionList=new List(true,false);
 		for(int i=0;i<juquesList.size();i++){
@@ -387,6 +488,13 @@ public class PdfExport {
 		return userAnswerList;
 	}
 
+	
+	/**
+	 * @param gradeMap
+	 * @param font
+	 * @param answerFont
+	 * @return pdf保密考试表格
+	 */
 	private PdfPTable createGradeTable(Map<String,Object> gradeMap,Font font, Font answerFont) {
 		PdfPTable gradeTable=null;
 		try {
@@ -427,6 +535,50 @@ public class PdfExport {
 		return gradeTable;	
 	}
 	
-	
+	/**
+	 * @param gradeMap
+	 * @param font
+	 * @param answerFont
+	 * @return 安全表格
+	 */
+	private PdfPTable CreateSaferGradeTable(Map<String,Object> gradeMap,Font font, Font answerFont) {
+		PdfPTable gradeTable=null;
+		try {
+			gradeTable = new PdfPTable(5);
+			gradeTable.setHorizontalAlignment(Element.ALIGN_LEFT);
+			//设置题目的类型
+			String[] cellTitle=new String[]{"题型","判断题","单选题","多选题","总分"};
+			PdfPCell cell=null;
+			for(int i=0;i<cellTitle.length; i++){
+				cell=new PdfPCell(new Paragraph(cellTitle[i],font));
+				cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+				gradeTable.addCell(cell);
+			}
+			
+			float totalGrade=0;
+			//统计电脑阅卷总分
+			for(String str:gradeMap.keySet()){
+				float grade=Float.parseFloat(gradeMap.get(str).toString());
+				totalGrade+=grade;
+			}
+			//分值单元格
+			cell=new PdfPCell(new Paragraph("分值",font));
+			cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+			gradeTable.addCell(cell);
+			
+			String[] cellContent=new String[]{
+					gradeMap.get("判断题").toString(),gradeMap.get("单选题").toString(),
+					gradeMap.get("多选题").toString(),String.valueOf(totalGrade)};
+			
+			for(int i=0;i<cellContent.length; i++){
+				cell=new PdfPCell(new Paragraph(cellContent[i], answerFont));
+				cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+				gradeTable.addCell(cell);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return gradeTable;	
+	}
 	
 }

@@ -256,7 +256,7 @@ public class CheckAnswerRestService {
 	 * @param score
 	 * @return
 	 */
-	private float checkJugement(List<Judgment> jgList, float score) {
+	public float checkJugement(List<Judgment> jgList, float score) {
 		float totalScore=0;
 		for(Judgment judege:jgList){
 			String answer=judege.getAnswer();
@@ -282,7 +282,7 @@ public class CheckAnswerRestService {
 	 * @param score
 	 * @return
 	 */
-	private float checkChoice(List<Choice> choiceList, float score) {
+	public float checkChoice(List<Choice> choiceList, float score) {
 		float totalScore=0;
 		for(Choice choice:choiceList){
 			String answer=choice.getAnswer();

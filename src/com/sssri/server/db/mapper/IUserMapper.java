@@ -61,8 +61,16 @@ public interface IUserMapper {
 	 * @param Employee_id
 	 * @return
 	 */
-	@Select("SELECT * FROM tb_mark WHERE Employee_id = #{Employee_id} AND Exam_date=(SELECT MAX(Exam_date)  FROM tb_mark WHERE Employee_id = #{Employee_id});")
+	@Select("SELECT * FROM tb_mark WHERE Employee_id = #{Employee_id} AND Exam_date=(SELECT MAX(Exam_date)  FROM tb_mark WHERE Employee_id = #{Employee_id} AND Exam_paper_id < 10000);")
 	
 	public Mark selectRecentMark(@Param("Employee_id")String Employee_id);
 	
+	/**
+	 * 查询用户最近一次安全考试时间与成绩
+	 * @param Employee_id
+	 * @return
+	 */
+	@Select("SELECT * FROM tb_mark WHERE Employee_id = #{Employee_id} AND Exam_date=(SELECT MAX(Exam_date)  FROM tb_mark WHERE Employee_id = #{Employee_id} AND Exam_paper_id > 10000);")
+	
+	public Mark selectRecentSafetyMark(@Param("Employee_id")String Employee_id);
 }

@@ -487,6 +487,60 @@ public class AdminManageService {
 		}
 	}
 	
+	@GET
+    @Path("/SafetyEXdownload")
+	@Produces(MediaType.APPLICATION_OCTET_STREAM)
+	public Response SafetyEXdownload(@Context HttpServletRequest request,@Context HttpServletResponse response)throws IOException{
+		BufferedInputStream bis = null;
+	    BufferedOutputStream bos = null;
+	    HttpSession httpsession=request.getSession();
+	    SqlSession session = null;
+	    try{
+	    	session = DatabaseUtils.getSessionFactory().openSession();
+			String userid = (String) httpsession.getAttribute("login_user");
+			// 数据库表操作
+			IUserMapper userDAO = session.getMapper(IUserMapper.class);
+			Mark employeMark = userDAO.selectRecentSafetyMark(userid);//查询时间
+			String date =employeMark.getExam_date().replaceAll(":", "");
+			if (date.length()>17) {
+				date=date.substring(0, 17);
+			}//字符串截取固定格式
+		    String filePath ="D:/SafeDoc/"+date+"/"+userid+".pdf";//"D:/doc/3306.pdf";
+		    String fileName="考卷";
+		    bis = new BufferedInputStream(new FileInputStream(filePath));
+		    bos = new BufferedOutputStream(response.getOutputStream());
+		 
+		    long fileLength = new File(filePath).length();
+		 
+		    response.setCharacterEncoding("UTF-8");
+		    response.setContentType("multipart/form-data");
+		    /*
+		     * 解决各浏览器的中文乱码问题
+		     */
+		    String userAgent = request.getHeader("User-Agent");
+		    byte[] bytes = userAgent.contains("MSIE") ? fileName.getBytes()
+		            : fileName.getBytes("UTF-8"); // fileName.getBytes("UTF-8")处理safari的乱码问题
+		    fileName = new String(bytes, "ISO-8859-1"); // 各浏览器基本都支持ISO编码
+	//	    response.setHeader("Content-disposition",
+	//	            String.format("attachment; filename=\"%s\".pdf", fileName));
+		 
+		    response.setHeader("Content-Length", String.valueOf(fileLength));
+		    response.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+		    response.setHeader("Content-Disposition", "attachment; filename=Examination" + ".pdf");//编写文件名
+		    byte[] buff = new byte[2048];
+		    int bytesRead;
+		    while (-1 != (bytesRead = bis.read(buff, 0, buff.length))) {
+		        bos.write(buff, 0, bytesRead);
+		    }
+		    bis.close();
+		    bos.close();
+			return Response.ok(buff, MediaType.APPLICATION_OCTET_STREAM).build();
+	    }finally {
+			if (session != null)
+				session.close();
+		}
+	}
+	
 	/**
 	 * 考卷类型查询
 	 * @return

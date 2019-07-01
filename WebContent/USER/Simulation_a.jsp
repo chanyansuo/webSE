@@ -153,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	 		cache: true,
    		 	type: "GET",
     		dataType: "json",
-    		url: "../rest/Practice/getExam",   //后台连接代码
+    		url: "../rest/Practice/GetSafetyExam",   //后台连接代码
     		async: false,
     		error: function(request) {
     	    	alert("生成考卷失败");

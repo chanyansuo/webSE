@@ -10,15 +10,18 @@
 
 
 #修改正式考试界面前端代码20190625 #
-修改了代码位置，提取重复JavaScript代码到js文件
-## TestActive ##
-test.jsp中需要使用JavaScript代码
+**修改了代码位置，提取重复JavaScript代码到js文件:**</br>
+1. TestActive :test.jsp中需要使用JavaScript代码</br>
+2. simulation.jsp中需要使用JavaScript代码</br>
+3. simulation_finished.jsp中需要使用JavaScript代码</br>
+4. exercise.jsp中需要使用JavaScript代码</br>
 
-## SimulationActive ##
-simulation.jsp中需要使用JavaScript代码
-
-## SimulationFinishActive ##
-simulation_finished.jsp中需要使用JavaScript代码
-
-## ExerciseActive ##
-exercise.jsp中需要使用JavaScript代码
+# 2019.7.1修改 #
+1. 完成安全考试代码修改，修改pds生成，安全考试试卷位置为“D:\SafeDoc”
+2. 修改联系模式接口，“Practice/GetSafetyPractice”填空题与简答题的题目都返回null
+3. 增加模拟训练考试接口：“Practice/GetSafetyExam”
+4. 增加接口“/Manage/SafetyEXdownload”安全试卷下载  <font color="#FF0000">前端需要再个人信息页面增加安全信息相关下载</font> 
+## <font color="#FF0000">bug需要修改</font> ##
+1. 练习模式：有填空题，简答题选项，这两个要去掉
+2. 练习模式：选择题，会有出现undefined选项
+3. 模拟训练与前面考试系统一样出现考卷不显示内容

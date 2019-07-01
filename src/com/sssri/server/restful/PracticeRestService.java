@@ -22,6 +22,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.google.gson.Gson;
 import com.sssri.server.db.DatabaseUtils;
+import com.sssri.server.db.mapper.ISafetyExamMapper;
 import com.sssri.server.db.mapper.IgetExamMapper;
 import com.sssri.server.db.model.Choice;
 import com.sssri.server.db.model.Completion;
@@ -587,5 +588,198 @@ public class PracticeRestService {
 		}
 		return totalScore;
 	}
+
+	//2019.7.1新增，安全考试联系内容
+	@POST
+    @Path("/GetSafetyPractice")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String GetSafeePractice(@FormParam("type")int type, @FormParam("isRandom")int mode){
+		List<?> practiceList = null;
+		String result = "";
+		Gson gson= new Gson();
+		SqlSession session = null;
+		try {
+			session = DatabaseUtils.getSessionFactory().openSession();
+			Examination ex = new Examination();
+			ISafetyExamMapper praticeDAO = session.getMapper(ISafetyExamMapper.class);
+			switch (type) {
+			case 1:
+				ex.completion=null;
+				practiceList=null;
+//				ex.completion=(List<Completion>) practiceList;
+				break;
+			case 2:
+				ex.judgment=praticeDAO.selectallJudgment();
+				practiceList=praticeDAO.selectallJudgment();
+				break;
+			case 3:
+				ex.choice=praticeDAO.selectallchoice(3);
+				practiceList=praticeDAO.selectallchoice(3);
+				break;
+			case 4:
+				ex.mulchoice=praticeDAO.selectallchoice(4);
+				practiceList=praticeDAO.selectallchoice(4);
+				break;
+			case 5:
+				ex.question=null;
+				practiceList=null;
+				break;
+			}
+			if (mode==0) {
+				result= gson.toJson(ex);
+				return result;
+			}
+			else if(mode==1){
+				Random ran = new Random();//随机数
+				Set<String> praticeSet= new LinkedHashSet<String>();
+				List<Object> practiceResult = new ArrayList<>();
+				if(practiceList.size()!=0){
+					praticeSet.clear();
+					while (true) {
+						int a = ran.nextInt(practiceList.size());//在[0,ChoiceNumber)中随机选出ExamChoiceNum个随机数
+						praticeSet.add(String.valueOf(a)); 
+						if (praticeSet.size() == practiceList.size() ) {
+							break;
+						}
+					}
+					for (String s : praticeSet) {
+						practiceResult.add(practiceList.get(Integer.parseInt(s)));
+					}
+				}
+				String tableName="";
+				switch (type) {
+				case 1:
+					tableName="completion";
+					break;
+				case 2:
+					tableName="judgment";
+					break;
+				case 3:
+					tableName="choice";
+					break;
+				case 4:
+					tableName="mulchoice";
+					break;
+				case 5:
+					tableName="question";
+					break;
+				}
+				HashMap<String, Object> hashmap=  new HashMap<String,Object>();
+				hashmap.put(tableName, practiceResult);
+				return gson.toJson(hashmap);
+			}
+		} finally {
+			if (session != null)
+				session.close();
+		}
+		return null;
+		
+	}
+	
+	/**
+	 * @param request
+	 * @return 安全试卷
+	 */
+	@GET
+    @Path("/GetSafetyExam")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String GetSafeExam(@Context HttpServletRequest request) {
+		String employeeId= (String) request.getSession().getAttribute("login_user");
+		Examination ex= new Examination();
+		Gson gson= new Gson();
+		String kaojuan="";
+		SqlSession session =null;
+		try {
+			session = DatabaseUtils.getSessionFactory().openSession();//数据库连接
+			IgetExamMapper Exammapper = session.getMapper(IgetExamMapper.class);
+			Record ExamRecrd = Exammapper.SelectExamNum(10001);//考试卷号选择应该由前段传输测试用1
+			ex= new Examination();
+			ex.setExam_id(1);//仅仅测试使用
+			/////2017.6.28设置考卷分值
+			ex.setCompletion_Score(0);
+			ex.setJudgment_Score(ExamRecrd.getJudgment_Score());
+			ex.setChoice_Score(ExamRecrd.getChoice_Score());
+			ex.setMulChoice_Score(ExamRecrd.getMulChoice_Score());
+			ex.setQA_Score(0);
+			////
+			Random ran = new Random();//随机数
+			Set<String> choiceSet = new LinkedHashSet<String>();//随机题号存放处
+			
+			
+			///判断题
+			List<Judgment> judgment =Exammapper.selectallJudgment();
+			int JudgNumber = judgment.size();
+			int ExamJugeNum = ExamRecrd.getJudgment_num();
+			if(JudgNumber < ExamJugeNum){
+				return null;
+			}
+			if(ExamJugeNum!=0){
+				choiceSet.clear();
+				while (true) {
+					int a = ran.nextInt(JudgNumber);//在[0,ChoiceNumber)中随机选出ExamChoiceNum个随机数
+					choiceSet.add(String.valueOf(a)); 
+					if (choiceSet.size() == ExamJugeNum ) {
+						break;
+					}
+				}
+				
+				for (String s : choiceSet) {
+					ex.judgment.add(judgment.get(Integer.parseInt(s)));
+				}
+			}
+			////单项选择题
+			List<Choice> Choiceid = Exammapper.selectallchoice(3);//选择单选题
+			int ChoiceNumber = Choiceid.size();//选择题总数
+			int ExamChoiceNum =ExamRecrd.getChoice_num();
+			if(ChoiceNumber < ExamChoiceNum){
+				return null;
+			}
+			if(ExamChoiceNum!=0){//防止没有该题型
+				choiceSet.clear();
+				while (true) {
+					int a = ran.nextInt(ChoiceNumber);//在[0,ChoiceNumber)中随机选出ExamChoiceNum个随机数
+					choiceSet.add(String.valueOf(a)); 
+					if (choiceSet.size() == ExamChoiceNum ) {
+						break;
+					}
+				}
+				
+				for (String s : choiceSet) {
+					ex.choice.add(Choiceid.get(Integer.parseInt(s)));
+				}
+			}
+
+			
+			///多项选择题
+			List<Choice> MulChoiceid = Exammapper.selectallchoice(4);//选择多选题
+			int MulChoiceNumber = MulChoiceid.size();//选择题总数
+			int ExamMulChoiceNum =ExamRecrd.getMulChoice_num();
+			if(MulChoiceNumber < ExamMulChoiceNum){
+				return null;
+			}
+			if(ExamMulChoiceNum!=0){//防止没有该题型
+				choiceSet.clear();
+				while (true) {
+					int a = ran.nextInt(MulChoiceNumber);//在[0,ChoiceNumber)中随机选出ExamChoiceNum个随机数
+					choiceSet.add(String.valueOf(a)); 
+					if (choiceSet.size() == ExamMulChoiceNum ) {
+						break;
+					}
+				}
+				for (String s : choiceSet) {
+					ex.mulchoice.add(MulChoiceid.get(Integer.parseInt(s)));
+				}
+			}
+			
+		
+			ex.setEmployee_id(employeeId);
+			kaojuan=gson.toJson(ex, Examination.class);
+			MNinfoManager.getManager().putKSInfo(ex);
+			return kaojuan;
+		} finally {
+			if (session != null)
+				session.close();
+		}
+    }
 }
 

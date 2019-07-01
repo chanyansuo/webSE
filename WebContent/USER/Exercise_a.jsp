@@ -158,7 +158,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 //    	 	type: "GET",
 			type:"POST",
     		dataType: "json",
-    		url: "../rest/Practice/getPractice",   //后台连接代码
+    		url: "../rest/Practice/GetSafetyPractice",   //后台连接代码
 			data:{"type":value,"isRandom":isRandom},
     		async: false,
     		error: function(request) {

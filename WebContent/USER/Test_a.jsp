@@ -284,7 +284,7 @@ document.oncontextmenu=function(){
    	 		cache: true,
    		 	type: "POST",
     		dataType: "json",
-    		url: "../rest/checkAnswer/endExam",   //后台连接代码
+    		url: "../rest/SafetyExam/endExam",   //后台连接代码
     		async: false,
     		error: function(request) {
     	    	alert("交卷失败，请联系监考人员！");

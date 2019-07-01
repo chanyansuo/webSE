@@ -41,11 +41,13 @@ import com.sssri.server.db.mapper.IgetExamMapper;
 import com.sssri.server.db.model.Choice;
 import com.sssri.server.db.model.Completion;
 import com.sssri.server.db.model.Judgment;
+import com.sssri.server.db.model.Mark;
 import com.sssri.server.db.model.Qanswer;
 import com.sssri.server.db.model.Question;
 import com.sssri.server.db.model.ReExam;
 import com.sssri.server.db.model.Record;
 import com.sssri.server.db.model.User;
+import com.sssri.server.restful.resource.PdfExport;
 import com.sssri.server.restful.resource.manager.KSInfoManager;
 import com.sssri.server.db.model.Examination;
 
@@ -294,4 +296,92 @@ public class SafetyExam {
 		}
     }
 	
+	/**
+	 * 2019.6.29修改
+	 * 考卷客观题评卷
+	 * @param ExamId
+	 * @return
+	 */
+	@Path("/endExam")
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	public void endExam(@Context HttpServletRequest request){
+		//答案处理类
+		CheckAnswerRestService checkserver = new CheckAnswerRestService();
+		String employee_id=(String) request.getSession().getAttribute("login_user");
+		//获取考试规则，考卷信息
+		Examination examInfo=(Examination)KSInfoManager.getManager().getKSInfo(employee_id);
+		if (examInfo==null) {//没有答案的时候
+			return ;
+		}
+		if (examInfo.getStatues().equals("1")) {
+			return ;
+		}
+		//单选题答案判断
+		List<Choice> choiceList=examInfo.getChoice();
+		float choiceScore=checkserver.checkChoice(choiceList, examInfo.getChoice_Score());
+		//多选题答案判断
+		List<Choice> mulChoiceList=examInfo.getMulchoice();
+		float mulChoiceScore=checkserver.checkChoice(mulChoiceList,examInfo.getMulChoice_Score());
+		//判断题答案判断
+		List<Judgment> jgList=examInfo.getJudgment();
+		float jgScore=checkserver.checkJugement(jgList,examInfo.getJudgment_Score());
+		
+		
+		//统计每项总分值
+//		Date nowdate= new Date();
+//		//设置日期格式化样式为：yyyy-MM-dd  
+//		SimpleDateFormat  SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+//		//格式化当前日期  
+//	    SimpleDateFormat.format(nowdate.getTime()); 
+		Mark employeeMark= new Mark();
+		employeeMark.setEmployee_id(employee_id);
+		employeeMark.setCompletion_score(0);//填空题的分数为0
+		employeeMark.setJudgment_score(jgScore);
+		employeeMark.setChoice_score(choiceScore);
+		employeeMark.setMchoice_score(mulChoiceScore);
+		employeeMark.setExam_paper_id(examInfo.getExam_id());
+		employeeMark.setScore_sum((jgScore+choiceScore+mulChoiceScore));//总分计算
+		employeeMark.setExam_date(examInfo.getStartTime());
+		//考卷信息替换
+		//examInfo.setCompletion(completionList);没有填空题
+		examInfo.setJudgment(jgList);
+		examInfo.setChoice(choiceList);
+		examInfo.setMulchoice(mulChoiceList);
+		examInfo.setStatues("1");
+		KSInfoManager.getManager().putKSInfo(examInfo);
+		//生成pdf考卷输入考生考卷信息，分数统计结果
+		PdfExport pdfmaker = new PdfExport();
+		pdfmaker.SafeExamExport(examInfo,employeeMark);
+		SqlSession session = null;
+		//存储考生简答题成绩
+		List<Qanswer> qanswerList=new ArrayList<Qanswer>();
+		for (int i = 0; i < examInfo.question.size(); i++) {
+			Qanswer qanswer = new Qanswer();
+			qanswer.setEmployee_id(employee_id);
+			qanswer.setExam_id(examInfo.getExam_id());
+			qanswer.setExam_date(examInfo.getStartTime());
+			qanswer.setQuestion_position(i);
+			qanswer.setQuestion_id(examInfo.question.get(i).getNum_Id());
+			qanswer.setUser_answer(examInfo.question.get(i).getUserAnswer());
+			qanswerList.add(qanswer);
+		}
+		
+		try {
+			session = DatabaseUtils.getSessionFactory().openSession();
+			IgetExamMapper userDAO = session.getMapper(IgetExamMapper.class);
+			userDAO.insertMark(employeeMark);
+			//2018.12.28修改如果没有简答题就不要提交内容
+			if(examInfo.question.size()>0)
+			{
+				userDAO.inserQanswer(qanswerList);
+			}
+			userDAO.updateUserNowExamStatue(employee_id);
+			session.commit();
+			KSInfoManager.getManager().removeKSInfo(employee_id);//考完后清空缓存
+		} finally {
+			if (session != null)
+				session.close();
+		}
+	}
 }
