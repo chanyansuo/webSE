@@ -54,6 +54,7 @@ public class UserRestService {
 //			result = session.selectList("com.sssri.server.db.UserMapper.selectUserByName", "%设定%");
 			result = userDAO.selectUserByID(userid);
 			Mark employeMark = userDAO.selectRecentMark(userid);
+			Mark safeMark=userDAO.selectRecentSafetyMark(userid);
 			Gson gson = new Gson();
 			String userInfo= gson.toJson(result, User.class);
 			JSONObject y = JSONObject.parseObject(userInfo);
@@ -64,8 +65,16 @@ public class UserRestService {
 				finalScore = employeMark.getFinal_score();
 				examDate= employeMark.getExam_date();
 			}
+			double safeScore =0;
+			String safeExamDate="";
+			if (safeMark!=null) {//防止未查到信息
+				safeScore = safeMark.getFinal_score();
+				safeExamDate= safeMark.getExam_date();
+			}
 			map.put("FinalScore", finalScore);
 			map.put("ExamDate", examDate);
+			map.put("SafeScore", safeScore);
+			map.put("SafeExamDate", safeExamDate);
 			map.put("Data",y);
 			return map.toJSONString();
 		} finally {

@@ -33,3 +33,26 @@
 ## <font color="#FF0000">bug需要修改</font> ##
 1. 练习模式下，单选题多选题，选项为空时需发送数据，避免出现undefined选项（保密部分有发送空值）
 2. user/getUserInfo 接口中需要增加 发送安全考试成绩，与安全考试时间，与保密考试数据分开显示
+
+## 2019.7.8bug修改 ##
+1. 增加选择题初始话，选项初值为空
+2. 修改getUserInfo接口传输json为：</br>
+{</br>
+	"SafeScore": 0,</br>
+	"FinalScore": 0,</br>
+	"Data": {</br>
+	&nbsp;&nbsp; "User_type": 1,</br>
+	&nbsp;&nbsp; "Department": "系统工程",</br>
+	&nbsp;&nbsp; "Now_Exam": 0,</br>
+	&nbsp;&nbsp; "User_code": 1,</br>
+	&nbsp;&nbsp; "Sex": "男",</br>
+	&nbsp;&nbsp; "User_position": "一般涉密人员",</br>
+	&nbsp;&nbsp; "Employee_id": "0313",</br>
+	&nbsp;&nbsp; "Pwd": "111111",</br>
+	&nbsp;&nbsp; "Online": 0,</br>
+	&nbsp;&nbsp; "Timekeeping": "0",</br>
+	&nbsp;&nbsp; "Name": "徐一凡"</br>
+	},</br>
+	"SafeExamDate": "2019-07-01 10:13:14.0",</br>
+	"ExamDate": "2019-01-15 10:00:00.0"</br>
+}</br>

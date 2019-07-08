@@ -29,17 +29,17 @@ public class Choice extends QuestionType implements IQuestionFunction {
 		// TODO Auto-generated constructor stub
 		setUserAnswer("");//初始化答案，不然不发
 	}
-	private String Option_one;
+	private String Option_one="";
 	
-	private String Option_two;
+	private String Option_two="";
 	
-	private String Option_three;
+	private String Option_three="";
 	
-	private String Option_four;
+	private String Option_four="";
 	
-	private String Option_five;
+	private String Option_five="";
 	
-	private String Option_six;
+	private String Option_six="";
 
 	public String getOption_one() {
 		return Option_one;
