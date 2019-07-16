@@ -117,8 +117,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     			UserInfo = data.Data;
     			ED1 = data.ExamDate;
     			FS1 = data.FinalScore;
-    			ED2 = data.ExamDate;        //发送安全考试数据  20190701mxy
-    			FS2 = data.FinalScore;      //发送安全考试数据  20190701mxy
+    			ED2 = data.SafeExamDate;        //发送安全考试数据  20190701mxy
+    			FS2 = data.SafeScore;           //发送安全考试数据  20190701mxy
 	    	}
 		});
 	}
@@ -136,42 +136,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		DEPARTMENT += UserInfo.Department;
 		if( typeof(FS1) != "undefined" ){
 			if(FS1 >=80){
-				var fs = "通过";
+				var fs1 = "通过";
 			}
 			else{
-				var fs = "未通过";
+				var fs1 = "未通过";
 			}
 		}
 		else{
-			var fs = "暂无数据";
+			var fs1 = "暂无数据";
 		}
-		TestCASE_1 += fs;
+		TestCASE_1 += fs1;
 		if ( ED1 != "" && typeof(ED1) != "undefined"){
-			var ed = ED;
+			var ed1 = ED1;
 		}
 		else{
-			var ed = "暂无数据"
+			var ed1 = "暂无数据"
 		}
-		TestTIME_1 += ed;
+		TestTIME_1 += ed1;
 		if( typeof(FS2) != "undefined" ){
 			if(FS2 >=80){
-				var fs = "通过";
+				var fs2 = "通过";
 			}
 			else{
-				var fs = "未通过";
+				var fs2 = "未通过";
 			}
 		}
 		else{
-			var fs = "暂无数据";
+			var fs2 = "暂无数据";
 		}
-		TestCASE_2 += fs;
+		TestCASE_2 += fs2;
 		if ( ED2 != "" && typeof(ED2) != "undefined"){
-			var ed = ED;
+			var ed2 = ED2;
 		}
 		else{
-			var ed = "暂无数据"
+			var ed2 = "暂无数据"
 		}
-		TestTIME_2 += ed;
+		TestTIME_2 += ed2;
 // 		KeepTIME += UserInfo.name;
 	}
 

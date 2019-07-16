@@ -121,8 +121,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     			UserInfo = data.Data;
     			ED1 = data.ExamDate;
     			FS1 = data.FinalScore;
-    			ED2 = data.ExamDate;        //发送安全考试数据  20190701mxy
-    			FS2 = data.FinalScore;      //发送安全考试数据  20190701mxy
+    			ED2 = data.SafeExamDate;        //发送安全考试数据  20190701mxy
+    			FS2 = data.SafeScore;           //发送安全考试数据  20190701mxy
 	    	}
 		});
 	}
@@ -162,7 +162,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				}
 			}
 			else{
-				var fs = "未出成绩";
+				var fs2 = "未出成绩";
 			}
 			z += a + "成绩:" + FS2 + b;
 			z += a + "通过情况：" + fs2 + b;
