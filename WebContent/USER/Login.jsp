@@ -164,7 +164,7 @@
  <div class="container">
   <div class="about-area">
    <div class="title-area text-center">
-    <h2 class="about-title">舰&nbsp;船&nbsp;分&nbsp;所</h2>
+    <h2 class="about-title">舰船自动化系统事业部</h2>
     <p class="title-description">Shanghai Ship and Shipping Research Institute</p>
   </div>
   <div class="about-items" style="padding-left: 70px;">

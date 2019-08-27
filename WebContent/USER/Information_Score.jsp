@@ -141,12 +141,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			else{
 				var fs1 = "未出成绩";
 			}
-			y += a + "成绩:" + FS1 + b;
-			y += a + "通过情况：" + fs1 + b;
+			//y += a + "成绩:" + FS1 + b;
+			//y += a + "通过情况：" + fs1 + b;
+			
 			y += a + "考试时间：" + ED1 + b;
 			var x = "../rest/Manage/download";
 			//y += "<iframe name=\"study\" src=\"../PDF/web/viewer.html?file=../../doc/" + window.sessionStorage.getItem("login_user") + ".pdf\" style=\"width: 90%;height: 500px;\"></iframe>";
 			y += "<a id=\"download\" class=\"download\" href=\"" + x +"\">打开试卷</a>";
+			y += a + "  " + b;
 		}
 		else{
 			y = a + "对不起，暂无考试数据！" + b;
@@ -164,12 +166,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			else{
 				var fs2 = "未出成绩";
 			}
-			z += a + "成绩:" + FS2 + b;
-			z += a + "通过情况：" + fs2 + b;
+			//z += a + "成绩:" + FS2 + b;
+			//z += a + "通过情况：" + fs2 + b;
+			z += a + "   " + b;
 			z += a + "考试时间：" + ED2 + b;
 			var x = "../rest/Manage/SafetyEXdownload";
 			//y += "<iframe name=\"study\" src=\"../PDF/web/viewer.html?file=../../doc/" + window.sessionStorage.getItem("login_user") + ".pdf\" style=\"width: 90%;height: 500px;\"></iframe>";
 			z += "<a id=\"download\" class=\"download\" href=\"" + x +"\">打开试卷</a>";
+			z += a + "  " + b;
 		}
 		else{
 			z = a + "对不起，暂无考试数据！" + b;

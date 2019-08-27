@@ -182,9 +182,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		y += a + SEX + b;
 		y += a + UserPOSITION + b;
 		y += a + DEPARTMENT + b;
-		y += a + TestCASE_1 + b;
+//		y += a + TestCASE_1 + b;
 		y += a + TestTIME_1 + b;
-		y += a + TestCASE_2 + b;
+//		y += a + TestCASE_2 + b;
 		y += a + TestTIME_2 + b;
 // 		y += a + KeepTIME + b;
 		$("#border").html(y);
