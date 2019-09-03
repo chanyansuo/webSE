@@ -63,12 +63,14 @@ public class UserRestService {
 			String examDate="";
 			if (employeMark!=null) {//防止未查到信息
 				finalScore = employeMark.getFinal_score();
+				
 				examDate= employeMark.getExam_date();
 			}
 			double safeScore =0;
 			String safeExamDate="";
 			if (safeMark!=null) {//防止未查到信息
 				safeScore = safeMark.getFinal_score();
+				
 				safeExamDate= safeMark.getExam_date();
 			}
 			map.put("FinalScore", finalScore);

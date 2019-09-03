@@ -319,7 +319,12 @@ public class AdminManageService {
 		SqlSession session = null;
 		try {
 			
-			int ExamId = Integer.parseInt(SExamId.substring(0,1));//截取第一数字考试编号
+			//int ExamId = Integer.parseInt(SExamId.substring(0,1));//截取第一数字考试编号
+			
+			//20190828修改读取试卷编号的方式
+			String b[] = SExamId.split(" ");
+			int ExamId = Integer.parseInt(b[0]);
+			
 			session = DatabaseUtils.getSessionFactory().openSession();
 			IgetAdminInfo userDAO = session.getMapper(IgetAdminInfo.class);
 			List<Mark> employeeMark=userDAO.selectExamScore(ExamId);

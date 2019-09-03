@@ -130,19 +130,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	function Valuation(){
 		if ( ED1 != "" && typeof(ED1) != "undefined"){
 			y = "";
-			if( typeof(FS1) != "undefined" ){
+			if( FS1 != 0 ){
 				if(FS1 >=80){
 					var fs1 = "通过";
 				}
 				else{
 					var fs1 = "未通过";
 				}
+				y += a + "成绩：" + FS1 + b;
 			}
 			else{
 				var fs1 = "未出成绩";
+				y += a + "成绩：暂无" + b;
 			}
-			//y += a + "成绩:" + FS1 + b;
-			//y += a + "通过情况：" + fs1 + b;
+			
+			y += a + "通过情况：" + fs1 + b;
 			
 			y += a + "考试时间：" + ED1 + b;
 			var x = "../rest/Manage/download";
@@ -155,20 +157,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 		if ( ED2 != "" && typeof(ED2) != "undefined"){
 			z = "";
-			if( typeof(FS2) != "undefined" ){
+			if( FS2 != 0 ){
 				if(FS2 >=80){
 					var fs2 = "通过";
 				}
 				else{
 					var fs2 = "未通过";
 				}
+				z += a + "成绩：" + FS2 + b;
 			}
 			else{
 				var fs2 = "未出成绩";
+				z += a + "成绩：暂无" + b;
 			}
-			//z += a + "成绩:" + FS2 + b;
-			//z += a + "通过情况：" + fs2 + b;
-			z += a + "   " + b;
+			
+			z += a + "通过情况：" + fs2 + b;
+			//z += a + "   " + b;
 			z += a + "考试时间：" + ED2 + b;
 			var x = "../rest/Manage/SafetyEXdownload";
 			//y += "<iframe name=\"study\" src=\"../PDF/web/viewer.html?file=../../doc/" + window.sessionStorage.getItem("login_user") + ".pdf\" style=\"width: 90%;height: 500px;\"></iframe>";
