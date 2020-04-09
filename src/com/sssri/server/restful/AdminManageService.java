@@ -96,6 +96,43 @@ public class AdminManageService {
 		}
 	}
 	
+	/**
+	 * 安全题库查询
+	 * @param type
+	 * @return
+	 */
+	@GET
+    @Path("/getsafetyQuestions/{type}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getAllSafetyCompletions(@PathParam("type") int type){
+		SqlSession session = null;
+		try{
+			session = DatabaseUtils.getSessionFactory().openSession();
+			// 数据库表操作
+			IgetAdminInfo userDAO = session.getMapper(IgetAdminInfo.class);
+			String rtn="{'total':0,'rows':[]}";//eazyui数据传输格式
+			String tablename= "tb_completion";
+		    //tablename="'"+tablename+"'";
+			List<?> ts=userDAO.selecttest(tablename,type);
+			List<?>allCompetions=null;//存储搜索题型
+			switch (type) {
+			case 2:
+				allCompetions=userDAO.selectallsafetyJudgment();
+				break;
+			case 3://选择题
+				allCompetions=userDAO.selectallsafetychoice();
+				break;
+			}
+			int total= allCompetions.size();//转换成分json使用
+			Gson gson=new Gson();
+			String xx=gson.toJson(allCompetions);//fastjson会出现大小写变化，使用gson不会出现顺序问题和大小写问题
+			rtn="{\"total\":"+total+",\"rows\":"+xx+"}";
+			return rtn;
+		} finally {
+			if (session != null)
+				session.close();
+		}
+	}
 	
 	/**
 	 * 题库增删改查
@@ -183,13 +220,13 @@ public class AdminManageService {
 				inserted = new ArrayList<Choice>(JSONArray.parseArray(insert, Choice.class));
 				try {
 					if (updated.size() > 0) {
-						adminDAO.updateChoices((List<Choice>)updated);
+						adminDAO.updateChoices("tb_choice",(List<Choice>)updated);
 					}
 					if (deleted.size() > 0) {
 						adminDAO.deletetableRows("tb_choice",(List<QuestionType>) deleted);
 					}
 					if (inserted.size() > 0) {
-						adminDAO.insertChoices((List<Choice>)inserted);
+						adminDAO.insertChoices("tb_choice",(List<Choice>)inserted);
 					}
 					session.commit();
 					return true;
@@ -211,6 +248,88 @@ public class AdminManageService {
 					}
 					if (inserted.size() > 0) {
 						adminDAO.insertAll("tb_question",(List<QuestionType>)inserted);
+					}
+					session.commit();
+					return true;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			return false;
+		} finally {
+			if (session != null)
+				session.close();
+		}		
+	}
+	
+	/**
+	 * 安全题库增删改查
+	 * @param type
+	 * @param form
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	@POST
+	@Path("/getsafetyChange/{type}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public boolean getSafetyQustionsChange(@PathParam("type") int type,MultivaluedMap<String, String> form ) {
+		SqlSession session = null;
+     	try {
+     		session = DatabaseUtils.getSessionFactory().openSession();
+			// 数据库表操作
+			IgetAdminInfo adminDAO = session.getMapper(IgetAdminInfo.class);
+			String update = form.getFirst("updated");
+			String delete = form.getFirst("deleted");
+			String insert = form.getFirst("inserted");
+			if (insert==null) {
+				insert="[]";
+			}
+			if (delete==null) {
+				delete="[]";
+			}
+			if (update==null) {
+				update="[]";
+			}
+			List<?> updated;
+			List<?> deleted;
+			List<?> inserted;
+			switch (type) {
+			case 2://判断
+				updated = new ArrayList<Judgment>(JSONArray.parseArray(update, Judgment.class));
+				deleted = new ArrayList<Judgment>(JSONArray.parseArray(delete, Judgment.class));
+				inserted = new ArrayList<Judgment>(JSONArray.parseArray(insert, Judgment.class));
+				try {
+					if (updated.size() > 0) {
+						adminDAO.updateAll("safety_judgment",(List<QuestionType>)updated);
+					}
+					if (deleted.size() > 0) {
+						adminDAO.deletetableRows("safety_judgment",(List<QuestionType>) deleted);
+					}
+					if (inserted.size() > 0) {
+						adminDAO.insertAll("safety_judgment",(List<QuestionType>)inserted);
+					}
+					session.commit();
+					return true;
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			case 3://选择
+				updated = new ArrayList<Choice>(JSONArray.parseArray(update, Choice.class));
+				deleted = new ArrayList<Choice>(JSONArray.parseArray(delete, Choice.class));
+				inserted = new ArrayList<Choice>(JSONArray.parseArray(insert, Choice.class));
+				try {
+					if (updated.size() > 0) {
+						adminDAO.updateChoices("safety_choice",(List<Choice>)updated);
+					}
+					if (deleted.size() > 0) {
+						adminDAO.deletetableRows("safety_choice",(List<QuestionType>) deleted);
+					}
+					if (inserted.size() > 0) {
+						adminDAO.insertChoices("safety_choice",(List<Choice>)inserted);
 					}
 					session.commit();
 					return true;
@@ -261,6 +380,46 @@ public class AdminManageService {
 			case 4:
 				tableName="tb_question";
 				questions=userDAO.selectSearch(tableName, keyWords);
+				break;
+			}
+			int total= questions.size();//转换成分json使用
+			Gson gson=new Gson();
+			String xx=gson.toJson(questions);
+			rtn="{\"total\":"+total+",\"rows\":"+xx+"}";
+			return rtn;
+			
+		} finally {
+			if (session != null)
+				session.close();
+		}
+	}
+	
+	/**
+	 * 安全题库搜索
+	 * @param type
+	 * @param keyWords
+	 * @return
+	 */
+	@POST
+    @Path("/getsafetySearch/{type}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String doSafetySearch(@PathParam("type") int type,@FormParam("Key") String keyWords){
+		SqlSession session = null;
+		String tableName = "";
+		List<?> questions = null;
+		try {
+			session = DatabaseUtils.getSessionFactory().openSession();
+			// 数据库表操作
+			IgetAdminInfo userDAO = session.getMapper(IgetAdminInfo.class);
+			String rtn="{'total':0,'rows':[]}";//eazyui数据传输格式
+			switch (type) {
+			case 2:
+				tableName="safety_judgment";
+				questions=userDAO.selectSearch(tableName, keyWords);
+				break;
+			case 3:
+				tableName="safety_choice";
+				questions=userDAO.selectChoiceSearch(tableName, keyWords);
 				break;
 			}
 			int total= questions.size();//转换成分json使用

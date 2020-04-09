@@ -1,4 +1,4 @@
-	package com.sssri.server.db.mapper;
+package com.sssri.server.db.mapper;
 
 import java.util.List;
 
@@ -43,6 +43,13 @@ public interface IgetAdminInfo {
 	@Select("select * from tb_judgment")
 	public List<Judgment> selectallJudgment();
 	
+	/**
+	 * 查询所有安全判断题
+	 * @return
+	 */
+	@Select("select * from safety_judgment")
+	public List<Judgment> selectallsafetyJudgment();	
+	
 	  /**
      * 查询所有选择题
      * @param type
@@ -50,6 +57,14 @@ public interface IgetAdminInfo {
      */
     @Select("select * from tb_choice")
 	public List<Choice> selectallchoice();
+    
+    /**
+     * 查询所有安全选择题
+     * @param type
+     * @return
+     */
+    @Select("select * from safety_choice")
+	public List<Choice> selectallsafetychoice();
     
     /**
      * 查询所有简答题
@@ -98,7 +113,7 @@ public interface IgetAdminInfo {
      */
     @UpdateProvider(type = AdminInfoProvider.class,method = "updateAllCompletion")
     public int updateCompletions(List<Completion> completions);
-    /**
+    /** 
      * 批量插入判断题/简答
      * @param judge
      * @return
@@ -123,7 +138,7 @@ public interface IgetAdminInfo {
      */
     @InsertProvider(type = AdminInfoProvider.class, method = "insertAllChoice") 
     @Options(useGeneratedKeys=true,keyProperty="list[0].num_Id")
-    public 	int insertChoices(List<Choice> choices);
+    public 	int insertChoices(@Param("tableName")String tableName,@Param("list")List<Choice> choices);
     
     /**
      * 批量更新单选多选题
@@ -131,7 +146,7 @@ public interface IgetAdminInfo {
      * @return
      */
     @UpdateProvider(type = AdminInfoProvider.class,method = "updateAllChoice")
-    public int updateChoices(List<Choice> choices);
+    public int updateChoices(@Param("tableName")String tableName,@Param("list")List<Choice> choices);
     
     /**
      * 根据表名输入，删除表内信息要输入表名

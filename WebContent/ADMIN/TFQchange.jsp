@@ -92,6 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								editable:false
 							}
 							}">答案</th>
+					
 							
 				<th data-options="field:'difficult',width:80,
 					formatter:function(value,row){
@@ -112,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								editable:false
 							}
 							}">难度</th>
-							
+					 	
 			</tr>
 		</thead>
 	</table>

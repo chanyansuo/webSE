@@ -81,6 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<th data-options="field:'Answer_four',width:100,editor:'textbox'">答案4</th>
 				<th data-options="field:'Answer_five',width:100,editor:'textbox'">答案5</th>
 				
+				<
 				<th data-options="field:'difficult',width:80,
 					formatter:function(value,row){
 							if (row.difficult == 0)
@@ -100,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								editable:false
 							}
 							}">难度</th>
-							
+				 			
 			</tr>
 		</thead>
 	</table>

@@ -25,9 +25,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!-- 代码 开始 -->
  <div id="firstpane" class="menu_list">
-    <p class="menu_head current">用户管理</p>
+    <p class="menu_head current">综合管理</p>
     <div style="display:block" class=menu_body >
       <a href="admin_User.jsp">用户管理</a>
+      <a href="admin_anquan_paper.jsp">试卷规则</a>
+      <a href="admin_anquan_ExamPeople.jsp">参考人员</a>
+      <a href="admin_anquan_score.jsp">成绩统计</a>
 <!--       <a href="admin_UserTime.jsp">用户学时信息</a> -->
     </div>
     <p class="menu_head">保密学习</p>
@@ -36,20 +39,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       	<a href="admin_baomi_TFQ.jsp">判断题题库</a>
       	<a href="admin_baomi_ChoiceQ.jsp">选择题题库</a>
       	<a href="admin_baomi_AQ.jsp">简答题题库</a>
-      	<a href="admin_baomi_paper.jsp">试卷规则</a>
-      	<a href="admin_baomi_ExamPeople.jsp">参考人员</a>
-<!--       <a href="#">往期试卷</a> -->
-<!--       <a href="admin_baomi_Grade.jsp">试卷主观题评分</a> -->
-      	<a href="admin_baomi_score.jsp">成绩统计</a>
-<!--       <a href="#">错题集查询</a> -->
     </div>
     <p class="menu_head">安全知识</p>
     <div style="display:none" class=menu_body >
       	<a href="admin_anquan_TFQ.jsp">判断题题库</a>
       	<a href="admin_anquan_ChoiceQ.jsp">选择题题库</a>
-      	<a href="admin_anquan_paper.jsp">试卷规则</a>
-      	<a href="admin_anquan_ExamPeople.jsp">参考人员</a>
-      	<a href="admin_anquan_score.jsp">成绩统计</a>
     </div>
 </div>
 <script type=text/javascript>

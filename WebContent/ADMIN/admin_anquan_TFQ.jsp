@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<p>判断题题库</p>
 				<div class="info2">
-					<iframe class="table" src="TFQchange.jsp"></iframe>
+					<iframe class="table" src="SafetyTFQchange.jsp"></iframe>
 				</div>
 		</div>
 	</div>

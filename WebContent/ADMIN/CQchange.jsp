@@ -102,6 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<th data-options="field:'Option_five',width:500,editor:'textbox'">选项5</th>
 				<th data-options="field:'Option_six',width:500,editor:'textbox'">选项6</th>
 				
+				
 				<th data-options="field:'difficult',width:80,
 					formatter:function(value,row){
 							if (row.difficult == 0)
@@ -121,7 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								editable:false
 							}
 							}">难度</th>
-							
+				 			
 			</tr>
 		</thead>
 	</table>

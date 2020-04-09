@@ -201,7 +201,7 @@ public class AdminInfoProvider {
 	public String insertAllChoice(Map map) {  
         List<Choice> users = (List<Choice>) map.get("list");  
         StringBuilder sb = new StringBuilder();  
-        sb.append("INSERT INTO tb_choice ");  
+        sb.append("INSERT INTO "+(String)map.get("tableName")+" ");  
         sb.append("(Content,Type,Option_one,Option_two,Option_three,Option_four,Option_five,Option_six,Answer,Difficult,Category) ");
         sb.append("VALUES ");  
         MessageFormat mf = new MessageFormat("(#'{'list[{0}].content},#'{'list[{0}].type},#'{'list[{0}].Option_one},#'{'list[{0}].Option_two},#'{'list[{0}].Option_three},#'{'list[{0}].Option_four},#'{'list[{0}].Option_five},#'{'list[{0}].Option_six}, #'{'list[{0}].answer}, #'{'list[{0}].difficult}, 1)");  
@@ -221,7 +221,7 @@ public class AdminInfoProvider {
 	public String updateAllChoice(Map map){//把传输数据放入map中get参数key值可以取得数据可是实现动态参数赋值
 		List<Choice> qCompletions= (List<Choice>) map.get("list");
 		StringBuilder sb = new StringBuilder(); 
-		sb.append("UPDATE tb_choice set ");
+		sb.append("UPDATE "+(String)map.get("tableName")+" set ");
 		sb.append("Content = CASE Num_id");
 		MessageFormat mf1=new MessageFormat(" WHEN #'{'list[{0}].num_Id} THEN #'{'list[{0}].content}");
 		for (int i = 0; i < qCompletions.size(); i++) {  
